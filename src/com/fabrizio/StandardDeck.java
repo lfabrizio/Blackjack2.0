@@ -35,7 +35,64 @@ public class StandardDeck {
             Collections.shuffle(cards);
          }
 
-//         todo: switch statement to return value
+//         todo: switch statement to return value of cards
+        public int valueOfCards(){
+        int valueInTotal = 0;
+        int aces = 0;
+
+        for(Card perCard : this.cards){
+            switch(perCard.getValue()) {
+                case TWO:
+                    valueInTotal += 2;
+                    break;
+                case THREE:
+                    valueInTotal += 3;
+                    break;
+                case FOUR:
+                    valueInTotal += 4;
+                    break;
+                case FIVE:
+                    valueInTotal += 5;
+                    break;
+                case SIX:
+                    valueInTotal += 6;
+                    break;
+                case SEVEN:
+                    valueInTotal += 7;
+                    break;
+                case EIGHT:
+                    valueInTotal += 8;
+                    break;
+                case NINE:
+                    valueInTotal += 9;
+                    break;
+                case TEN:
+                    valueInTotal += 10;
+                    break;
+                case JACK:
+                    valueInTotal += 10;
+                    break;
+                case QUEEN:
+                    valueInTotal += 10;
+                    break;
+                case KING:
+                    valueInTotal += 10;
+                    break;
+                case ACE:
+                    aces += 1;
+                    break;
+            }
+        }
+            for(int i = 0; i < aces;i++){
+                if(valueInTotal > 10){
+                    valueInTotal += 1;
+                }
+                else{
+                    valueInTotal +=11;
+                }
+    }
+            return valueInTotal;
+}
 
 
         //method to remove a card (use i)
@@ -48,11 +105,17 @@ public class StandardDeck {
         return this.cards.get(i);
         }
 
+        // method to add a card back to the deck
+    public void addCard(Card addACard){
+        this.cards.add(addACard);
+    }
+
         // method that will draw from the deck
          public void draw(StandardDeck takeCard) {
         this.cards.add(takeCard.getACard(0));
         takeCard.removeCard(0);
-    }
+         }
+
 
 
     //loop through -- toString method
