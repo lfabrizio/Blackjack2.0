@@ -16,7 +16,6 @@ public class StandardDeck {
         this.cards = new ArrayList<Card>();
     }
 
-
 //        TODO: Method to populate a full Deck- unique to the game Blackjack - deck 13 values and 4 suits
             //Done
         public void BlackJackDeck(){

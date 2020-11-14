@@ -18,6 +18,10 @@ package com.fabrizio;
                     ", value=" + value +
                     '}';
         }
+        // needed for switch statement implementation
+        public Value getValue(){
+            return this.value;
+        }
     }
 
 

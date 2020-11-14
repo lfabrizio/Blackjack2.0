@@ -5,11 +5,16 @@ import java.util.Scanner;
 public class Console {
 
     public Console(){
+    }
 
+    public static void welcome(String gameChoice){
+        System.out.print("Welcome to " + gameChoice);
+        System.out.println("\n");
     }
 
     public void playGame(){
         //    TODO: Game Loop in here
+        Console.welcome("Blackjack");
         //        // create the playing deck
       StandardDeck playDeck = new StandardDeck();
        playDeck.BlackJackDeck();
