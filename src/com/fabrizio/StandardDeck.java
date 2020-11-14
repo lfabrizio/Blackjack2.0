@@ -7,15 +7,18 @@ import java.util.List;
 
 public class StandardDeck {
 //    TODO: create instance variable from card class
+        //Done
     private ArrayList<Card> cards;
 
 //    todo: constructor for new standard deck
+        //Done
     public StandardDeck() {
         this.cards = new ArrayList<Card>();
     }
 
 
 //        TODO: Method to populate a full Deck- unique to the game Blackjack - deck 13 values and 4 suits
+            //Done
         public void BlackJackDeck(){
             for(Suit suitCard : Suit.values()){
                 for(Value numberCard : Value.values()){
@@ -26,10 +29,13 @@ public class StandardDeck {
             }
         }
 
-        //method to shuffle
+//    TODO: Shuffle cards with collections
+        //Done
         public void shuffle() {
             Collections.shuffle(cards);
          }
+
+//         todo: switch statement to return value
 
 
         //method to remove a card (use i)
