@@ -12,7 +12,7 @@ public class Console {
         System.out.println("\n");
     }
 
-    public void playGame(){
+    public static void playGame(){
         //    TODO: Game Loop in here
         Console.welcome("Blackjack");
         //        // create the playing deck

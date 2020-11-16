@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class StandardDeck {
+public class StandardDeck{
 //    TODO: create instance variable from card class
         //Done
     private ArrayList<Card> cards;
@@ -105,16 +105,20 @@ public class StandardDeck {
         }
 
         // method to add a card back to the deck
-    public void addCard(Card addACard){
+          public void addCard(Card addACard){
         this.cards.add(addACard);
-    }
+           }
 
-        // method that will draw from the deck
+        // method that will draw from the deck. index zero
          public void draw(StandardDeck takeCard) {
         this.cards.add(takeCard.getACard(0));
         takeCard.removeCard(0);
          }
 
+//         todo: a method to see how many cards are in the deck
+    public int deckCount(){
+        return this.cards.size();
+    }
 
 
     //loop through -- toString method
