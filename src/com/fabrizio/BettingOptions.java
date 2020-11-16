@@ -2,6 +2,7 @@ package com.fabrizio;
 
 public interface BettingOptions {
 
+    public void draw();
 //    TODO: shuffle could go here as well as split and double down once implemented
 // todo for early week draw
 
