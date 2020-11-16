@@ -96,10 +96,17 @@ public class Main {
                 playersMoneyBalance += playersWager;
                 roundIsOver = true;
             }
+            else if(roundIsOver == false){
+                System.out.println("***YOU LOST THE HAND!***");
+                playersMoneyBalance -= playersWager;
+                roundIsOver = true;
+            }
+//            TODO: Move all cards from players hand and dealers hand back into the deck
+            playersHand.reStackDeck(playDeck);
+            dealersHand.reStackDeck(playDeck);
+            System.out.println("***Hand is Over!***");
         }
             System.out.println("Game Over! Deposit more money to play again!");
         }
-
-
     }
 

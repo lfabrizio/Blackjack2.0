@@ -120,6 +120,17 @@ public class StandardDeck{
         return this.cards.size();
     }
 
+//     todo: re-stack the deck
+    public void reStackDeck(StandardDeck stack){
+        int currentDeckSize = this.cards.size();
+        for(int i = 0; i < currentDeckSize; i++){
+            stack.addCard(this.getACard(i));
+        }
+        for(int i = 0; i < currentDeckSize; i++){
+            this.removeCard(0);
+        }
+    }
+
 
     //loop through -- toString method
     public String toString(){

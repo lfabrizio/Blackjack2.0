@@ -13,4 +13,19 @@ public class Player {
           this.playerName = playerName;
      }
 
+     public int getCasinoIdNumber() {
+          return casinoIdNumber;
+     }
+
+     public double getPlayerMoney() {
+          return playerMoney;
+     }
+
+     public String getPlayerName() {
+          return playerName;
+     }
+
+     public int getScore() {
+          return score;
+     }
 }
