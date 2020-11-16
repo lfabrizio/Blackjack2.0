@@ -6,22 +6,23 @@ public class Main {
 
     public static void main(String[] args) {
 	   // create a welcome message
-       Console.welcome("Vegas BlackJack");
+//       Console.welcome("Vegas BlackJack");
 //        // create the playing deck
         StandardDeck playDeck = new StandardDeck();
         playDeck.BlackJackDeck();
 //        // shuffle the deck
         playDeck.shuffle();
-        System.out.println(playDeck);
+//        System.out.println(playDeck);
 ////        TODO: create a player hand and one for the dealer
         StandardDeck playersHand = new StandardDeck();
         StandardDeck dealersHand = new StandardDeck();
 
-        int playersMoneyBalance = 100;
+        int playersMoneyBalance = 500;
         Scanner scanner = new Scanner(System.in);
 
         while(playersMoneyBalance > 0) {
-            System.out.print("You have a $ balance of " + playersMoneyBalance + "Place your bet!");
+            Console.welcome("Vegas BlackJack!");
+            System.out.print("You have a $ balance of " + playersMoneyBalance + ".... Place your bet!");
             int playersWager = scanner.nextInt();
             if (playersWager > playersMoneyBalance) {
                 System.out.print("Insufficient Funds!");
@@ -39,15 +40,18 @@ public class Main {
 
             // Loop to present the hands
             while (true) {
-                System.out.print("***Player Ones Hand***  : ");
+                System.out.print("***PLAYER ONES HAND***  ");
                 System.out.print(playersHand.toString());
                 System.out.println("Your Hand is Currently -- " + playersHand.valueOfCards());
 
                 // and then the dealers hand only one get card due to second card must be hidden
-                System.out.println("Dealer has --" + dealersHand.getACard(0).toString() + "***HIDDEN***");
+                System.out.println("\n");
+                System.out.print("***DEALERS HAND***\n");
+
+                System.out.println("Dealer has " + dealersHand.getACard(0).toString() + "***HIDDEN***");
 
 //                Todo: Player options
-                System.out.println("HIT(1) or STAND(2)");
+                System.out.println("--HIT(1) or STAND(2)--");
                 int optionsResponse = scanner.nextInt();
                 if (optionsResponse == 1) {
                     playersHand.draw(playDeck);
@@ -66,9 +70,9 @@ public class Main {
                 }
             }
             // Show the Dealers Hidden Card, as Well as Full hand
-            System.out.println("***Dealers Hand***-- " + dealersHand.toString());
+            System.out.println("***Dealers Hand*** " + dealersHand.toString());
             if (dealersHand.valueOfCards() > playersHand.valueOfCards() && roundIsOver == false) {
-                System.out.println("***Dealer Wins!***");
+                System.out.println("***Dealer Wins***");
                 playersMoneyBalance -= playersWager;
                 roundIsOver = true;
             }
@@ -107,6 +111,8 @@ public class Main {
             System.out.println("***Hand is Over!***");
         }
             System.out.println("Game Over! Deposit more money to play again!");
+//        todo: Will add a deposit vs leave table
+//           System.out.print("--Deposit Money(1) or Leave Table(2)--");
         }
     }
 

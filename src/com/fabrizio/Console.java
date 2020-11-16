@@ -3,7 +3,7 @@ package com.fabrizio;
 import java.util.Scanner;
 
 public class Console {
-
+//    todo: will eventually move main game loop to here ... ran out of time
     public Console(){
     }
 
@@ -49,6 +49,7 @@ public class Console {
         System.out.println("Game Over! You are out of Funds!");
     }
 
+//    todo: Would like to create a method to deposit more money
 
-
+// todo: method to cash out winning and leave the game
 }
