@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 	   // create a welcome message
+//        todo: implement a delay between my hit or stand, and then dealers hand concluson ..research
 //       Console.welcome("Vegas BlackJack");
 //        // create the playing deck
         StandardDeck playDeck = new StandardDeck();
@@ -39,7 +40,7 @@ public class Main {
             dealersHand.draw(playDeck);
 
             // Loop to present the hands
-            while (true) {
+           while (true) {
                 System.out.print("***PLAYER ONES HAND***  ");
                 System.out.print(playersHand.toString());
                 System.out.println("Your Hand is Currently -- " + playersHand.valueOfCards());
