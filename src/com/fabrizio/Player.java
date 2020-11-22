@@ -13,6 +13,9 @@ public class Player {
           this.playerName = playerName;
      }
 
+//     public void doubleDown(){
+//
+//          }
 
      public int getCasinoIdNumber() {
           return casinoIdNumber;

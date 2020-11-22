@@ -7,7 +7,7 @@ import java.util.List;
 
 public class StandardDeck{
 //    TODO: create instance variable from card class
-        //Done
+        //instance variable from card class--Done
     private ArrayList<Card> cards;
 
 //    todo: constructor for new standard deck
