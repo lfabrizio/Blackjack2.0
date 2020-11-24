@@ -16,7 +16,7 @@ import java.util.Scanner;
 
         }
 //        TODO: Will go back to this later. Idea is to have a rigged deck and marked cards
-//                use interface to implement shuffle etc
+//
 //        public void shuffle() {
 //            Collections.shuffle();
 //        }

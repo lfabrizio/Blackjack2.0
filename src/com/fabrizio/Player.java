@@ -1,21 +1,20 @@
 package com.fabrizio;
 
-public class Player {
+public class Player implements RetrieveInformation{
      private int casinoIdNumber;
      double playerMoney;
-     private String playerName;
+     private String name;
      private int score;
 
 
      public Player(int casinoIdNumber, String playerName){
           this.casinoIdNumber = casinoIdNumber;
-          this.playerName = playerName;
+          this.name = playerName;
      }
 
      public void leaveTable(){
-          System.out.println("I've has enough gambling for today! See Ya Next time!");
+          System.out.println("I've had enough gambling for today! See Ya Next time!");
      }
-
 
 
      public int getCasinoIdNumber() {
@@ -26,8 +25,8 @@ public class Player {
           return playerMoney;
      }
 
-     public String getPlayerName() {
-          return playerName;
+     public String getName() {
+          return this.name;
      }
 
      public int getScore() {

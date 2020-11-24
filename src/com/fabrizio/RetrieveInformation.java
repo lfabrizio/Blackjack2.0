@@ -1,8 +1,6 @@
 package com.fabrizio;
 
 public interface RetrieveInformation {
+    public String getName();
 
-    public void draw();
-    // Double down logic
-    // split logic
 }

@@ -84,8 +84,7 @@ public class Console {
                     System.out.println("Your Hand is now -- " + playersHand.valueOfCards());
                     break;
                 }
-
-//                todo: need to implement stand
+//                Stand Option
                 if (optionsResponse == 2) {
                     break;
                 }
@@ -97,20 +96,20 @@ public class Console {
                 playersMoneyBalance -= playersWager;
                 roundIsOver = true;
             }
-//            Todo: what if dealer keeps drawing from deck?
+//            what if dealer keeps drawing from deck?
             while (dealersHand.valueOfCards() < 17 && roundIsOver == false) {
                 dealersHand.draw(playDeck);
                 System.out.println("Dealers card is a :" + dealersHand.getACard(dealersHand.deckCount() - 1).toString());
             }
-//                Todo: Display Dealers Hand in Totality
+//            Display Dealers Hand in Totality
             System.out.println("***Dealers Hand*** - " + dealersHand.valueOfCards());
-            //        Todo: Did The Dealer Bust or did they win?
+            //        Did The Dealer Bust or did they win?
             if((dealersHand.valueOfCards() > 21) && roundIsOver == false){
                 System.out.println("***DEALER BUSTS , YOU WIN!***");
                 playersMoneyBalance += playersWager;
                 roundIsOver = true;
             }
-//                TODO: Determine if there is a push
+//                Determine if there is a push
             if((playersHand.valueOfCards() == dealersHand.valueOfCards()) && roundIsOver == false){
                 System.out.println("***PUSH!***");
                 roundIsOver = true;
@@ -140,5 +139,5 @@ public class Console {
 
 //    todo: Would like to create a method to deposit more money
 
-// todo: method to cash out winning and leave the game
+
 

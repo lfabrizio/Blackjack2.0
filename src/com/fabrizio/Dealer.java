@@ -1,6 +1,6 @@
 package com.fabrizio;
 
-public class Dealer {
+public class Dealer implements RetrieveInformation{
     private String name;
     private int employeeId;
 
@@ -10,7 +10,7 @@ public class Dealer {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getEmployeeId() {
