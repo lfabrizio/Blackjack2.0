@@ -3,7 +3,7 @@ package com.fabrizio;
 import java.util.Scanner;
 
 public class Console {
-//    todo: will eventually move main game loop to here ... ran out of time
+
     public Console(){
     }
 
@@ -13,11 +13,11 @@ public class Console {
     }
 
     public static void playGame() {
-        //    TODO: Game Loop in here
+        // Game Loop begins
         Console.welcome("Blackjack");
         StandardDeck playersHand = new StandardDeck();
         StandardDeck dealersHand = new StandardDeck();
-        
+
 //        // create the playing deck
         StandardDeck playDeck = new StandardDeck();
         playDeck.BlackJackDeck();
@@ -32,6 +32,7 @@ public class Console {
             Console.welcome("Vegas BlackJack!");
             System.out.print("You have a $ balance of " + playersMoneyBalance + ".... Place your bet!");
             int playersWager = scanner.nextInt();
+            int doubleDown = playersWager * 2;
             if (playersWager > playersMoneyBalance) {
                 System.out.print("Insufficient Funds!");
                 break;
@@ -58,13 +59,16 @@ public class Console {
 
                 System.out.println("Dealer has " + dealersHand.getACard(0).toString() + "***HIDDEN***");
 
-//                Todo: Player options
+//               Player options
+                System.out.println("\n");
+                System.out.print("Player one, action is to you.\n");
                 System.out.println("--HIT(1) or STAND(2)--");
+                System.out.println("-- Double Down(3)--");
                 int optionsResponse = scanner.nextInt();
                 if (optionsResponse == 1) {
                     playersHand.draw(playDeck);
                     System.out.println("Your card---" + playersHand.getACard(playersHand.deckCount() - 1).toString());
-//                    todo: if statement for if the player busts
+//                    If the player busts
                     if (playersHand.valueOfCards() > 21) {
                         System.out.println("BUST! You Lose!");
                         playersMoneyBalance -= playersWager;
@@ -72,6 +76,15 @@ public class Console {
                         break;
                     }
                 }
+              // Double Down
+                if(optionsResponse == 3){
+                    playersMoneyBalance -= playersWager;
+                    playersHand.draw(playDeck);
+                    System.out.println("Double Down Card is " + playersHand.getACard(playersHand.deckCount() - 1).toString());
+                    System.out.println("Your Hand is now -- " + playersHand.valueOfCards());
+                    break;
+                }
+
 //                todo: need to implement stand
                 if (optionsResponse == 2) {
                     break;
@@ -121,6 +134,7 @@ public class Console {
         System.out.println("Game Over! Deposit more money to play again!");
 //        todo: Will add a deposit vs leave table
 //           System.out.print("--Deposit Money(1) or Leave Table(2)--");
+
     }
     }
 

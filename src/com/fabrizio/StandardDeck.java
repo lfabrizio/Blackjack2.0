@@ -6,7 +6,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class StandardDeck{
-//    TODO: create instance variable from card class
         //instance variable from card class--Done
     private ArrayList<Card> cards;
 
