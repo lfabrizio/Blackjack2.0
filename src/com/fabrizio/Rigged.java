@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 
-    public class Rigged{
+    public class Rigged implements Deck{
         private ArrayList<Card> markedCards;
 
         public Rigged() {
@@ -15,11 +15,11 @@ import java.util.Scanner;
         public void riggedDeck(){
 
         }
-//        TODO: Will go back to this later. Idea is to have a rigged deck and marked cards
-//
-//        public void shuffle() {
-//            Collections.shuffle();
-//        }
+
+        @Override
+        public void shuffle() {
+            Collections.shuffle(markedCards);
+        }
 //
 
 //

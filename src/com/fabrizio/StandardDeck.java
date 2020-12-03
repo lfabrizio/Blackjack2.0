@@ -5,12 +5,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class StandardDeck{
+public class StandardDeck implements Deck{
         //instance variable from card class--Done
     private ArrayList<Card> cards;
 
-//    todo: constructor for new standard deck
-        //Done
     public StandardDeck() {
         this.cards = new ArrayList<Card>();
     }
@@ -29,6 +27,7 @@ public class StandardDeck{
 
 //    TODO: Shuffle cards with collections
         //Done
+        @Override
         public void shuffle() {
             Collections.shuffle(cards);
          }
