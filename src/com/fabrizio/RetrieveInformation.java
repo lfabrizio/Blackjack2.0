@@ -1,6 +1,6 @@
 package com.fabrizio;
 
 public interface RetrieveInformation {
-    public String getName();
+    String getName();
 
 }
