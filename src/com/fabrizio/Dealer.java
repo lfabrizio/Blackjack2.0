@@ -1,19 +1,19 @@
 package com.fabrizio;
 
-public class Dealer implements RetrieveInformation{
-    private String name;
-    private int employeeId;
-
-    public Dealer(String name, int employeeId) {
-        this.name = name;
-        this.employeeId = employeeId;
-    }
-
+public class Dealer implements Actor {
+    @Override
     public String getName() {
-        return this.name;
+        return null;
     }
 
-    public int getEmployeeId() {
-        return employeeId;
+    @Override
+    public int getBet() {
+        return 0;
+    }
+
+    @Override
+    public int getAction() {
+        return 0;
     }
 }
+

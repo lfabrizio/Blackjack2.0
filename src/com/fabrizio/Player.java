@@ -1,35 +1,19 @@
 package com.fabrizio;
 
-public class Player implements RetrieveInformation{
-     private int casinoIdNumber;
-     double playerMoney;
-     private String name;
-     private int score;
+public class Player implements Actor {
 
-
-     public Player(int casinoIdNumber, String playerName){
-          this.casinoIdNumber = casinoIdNumber;
-          this.name = playerName;
-     }
-
-     public void leaveTable(){
-          System.out.println("I've had enough gambling for today! See Ya Next time!");
-     }
-
-
-     public int getCasinoIdNumber() {
-          return casinoIdNumber;
-     }
-
-     public double getPlayerMoney() {
-          return playerMoney;
-     }
-
+     @Override
      public String getName() {
-          return this.name;
+          return null;
      }
 
-     public int getScore() {
-          return score;
+     @Override
+     public int getBet() {
+          return 0;
+     }
+
+     @Override
+     public int getAction() {
+          return 0;
      }
 }
